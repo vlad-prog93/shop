@@ -8,7 +8,9 @@ import styles from './MyLink.module.scss';
 const MyLink = ({ to, text }: { to: string, text: string }) => {
     return (
         <NavLink
-            className={({ isActive }) => isActive ? styles.navlink_active : styles.navlink}
+            className={({ isActive }) => isActive 
+            ? `${styles.navlink} ${styles.navlink_active}` 
+            : styles.navlink}
             to={to}>
             {text}
         </NavLink>

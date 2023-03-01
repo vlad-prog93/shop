@@ -5,11 +5,13 @@ import { Link } from "react-router-dom";
 // components
 
 // styles
-import styles from './SimpleSlider.module.scss';
-import './arrow.css'
+import './SimpleSlider.css';
+
+
 // images
 import one from '../../../images/1.jpg';
 import two from '../../../images/2.jpg';
+import three from '../../../images/3.jpg';
 import nextArrow from '../../../images/arrow-next.svg';
 import prevArrow from '../../../images/arrow-prev.svg';
 
@@ -19,12 +21,14 @@ const SimpleSlider = () => {
     const settings = {
         dots: true,
         infinite: true,
-        speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
         swipe: false,
         accessibility: false,
-        autoplay: false,
+        autoplay: true,
+        speed: 600,
+        autoplaySpeed: 5000,
+        vertical: false,
         nextArrow: (
             <div>
                 <button><img src={nextArrow} /></button>
@@ -43,17 +47,21 @@ const SimpleSlider = () => {
             <Slider {...settings}>
                 <div className='slick__slide'>
                     <Link to='/caps' className='slick__slide_link'>
-
-                        <h2><span></span>Шапки<span></span></h2>
-
+                        <h2><span></span><b>Подростковые шапки</b><span></span></h2>
                     </Link>
                     <img src={one} alt="one" />
                 </div>
                 <div className='slick__slide'>
                     <Link to='/bandages' className='slick__slide_link'>
-                        <h2><span></span>Повязки<span></span></h2>
+                        <h2><span></span><b>Женские шапки</b><span></span></h2>
                     </Link>
                     <img src={two} alt="two" />
+                </div>
+                <div className='slick__slide'>
+                    <Link to='/bandages' className='slick__slide_link'>
+                        <h2><span></span><b>Повязки</b><span></span></h2>
+                    </Link>
+                    <img src={three} alt="three" />
                 </div>
             </Slider>
         </div>

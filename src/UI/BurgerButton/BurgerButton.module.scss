@@ -1,0 +1,45 @@
+@use '../../styles/modules/colors' as color;
+
+
+.burger__menu {
+  display: none;
+
+  @media screen and (max-width: 700px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      height: 25px;
+      width: 25px;
+
+
+      span {
+          width: 100%;
+          height: 3px;
+          background-color: color.$text-color-bright;
+          border-radius: 2px;
+          transition: all .3s ease-in;
+
+          &:first-of-type,
+          &:last-of-type {
+              transform-origin: 0%;
+          }
+      }
+
+      &_active {
+          span:first-of-type {
+              transform: rotate(45deg);
+              width: 122%;
+          }
+
+          span:last-of-type {
+              transform: rotate(-45deg);
+              width: 122%;
+          }
+
+          span:nth-of-type(2) {
+              opacity: 0;
+          }
+      }
+  }
+}
