@@ -6,12 +6,16 @@ import { Link } from "react-router-dom";
 
 // styles
 import styles from './SimpleSlider.module.scss';
-
+import './arrow.css'
 // images
 import one from '../../../images/1.jpg';
 import two from '../../../images/2.jpg';
+import nextArrow from '../../../images/arrow-next.svg';
+import prevArrow from '../../../images/arrow-prev.svg';
+
 
 const SimpleSlider = () => {
+
     const settings = {
         dots: true,
         infinite: true,
@@ -23,29 +27,33 @@ const SimpleSlider = () => {
         autoplay: false,
         nextArrow: (
             <div>
-                <div className={styles.slider__next_arrow}> ⫸ </div>
+                <button><img src={nextArrow} /></button>
             </div>
         ),
         prevArrow: (
             <div>
-                <div className={styles.slider__prev_arrow}> ⫷ </div>
+                <button><img src={prevArrow} /></button>
             </div>
         )
+
+
     };
     return (
-        <div className={styles.slider__wrapper}>
+        <div className='slider__wrapper'>
             <Slider {...settings}>
-                <div className={styles.slick__slide}>
-                    <Link to='/caps' className={styles.slick__slide_link}>
-                        <h2 className={styles.slick__slide_title}><span />Шапки<span /></h2>
-                        <img className={styles.slick__slide_img} src={one} alt='шапки' />
+                <div className='slick__slide'>
+                    <Link to='/caps' className='slick__slide_link'>
+
+                        <h2><span></span>Шапки<span></span></h2>
+
                     </Link>
+                    <img src={one} alt="one" />
                 </div>
-                <div className={styles.slick__slide}>
-                    <Link to='/caps' className={styles.slick__slide_link}>
-                        <h2 className={styles.slick__slide_title}><span />Повязки<span /></h2>
-                        <img className={styles.slick__slide_img} src={two} alt='Повязки' />
+                <div className='slick__slide'>
+                    <Link to='/bandages' className='slick__slide_link'>
+                        <h2><span></span>Повязки<span></span></h2>
                     </Link>
+                    <img src={two} alt="two" />
                 </div>
             </Slider>
         </div>
