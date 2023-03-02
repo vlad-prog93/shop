@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 // components
 
 // styles
-import './SimpleSlider.css';
+import './SimpleSlider.scss';
 
 
 // images
