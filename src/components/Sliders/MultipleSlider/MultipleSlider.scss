@@ -1,0 +1,37 @@
+@use '../../../styles/modules/colors' as color;
+
+.MultipleSlider__info {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: color.$text-color-dark;
+  font-family: 'Roboto';
+  font-size: 20px;
+  font-weight: 400;
+  
+  p {
+    flex-shrink: 1;
+  }
+
+  span {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px dashed color.$text-color-bright;
+  }
+
+}
+
+.mulipleSlider__wrapper {
+  height: 300px;
+  width: 100%;
+  background-color: #FFFFFF;
+  margin-bottom: 30px;
+
+  .multiple-slider__item {
+    min-height: 285px;
+
+    .multiple-slider__link {
+      
+    }
+  }
+}
