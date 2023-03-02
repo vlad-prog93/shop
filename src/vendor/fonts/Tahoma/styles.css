@@ -1,0 +1,6 @@
+@font-face {
+  font-family: 'tahoma';
+  src: url(./tahoma.woff2) format('woff2'),
+       url(./tahoma.woff) format('woff'),
+       url(./tahoma.ttf) format('truetype');
+}
