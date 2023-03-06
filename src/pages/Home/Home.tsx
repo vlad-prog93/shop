@@ -1,6 +1,7 @@
 // node_modules
 
 // components
+import { Intro } from '../../components/Intro';
 import { MultipleSlider } from '../../components/Sliders/MultipleSlider';
 import { SimpleSlider } from '../../components/Sliders/SimpleSlider';
 
@@ -17,6 +18,7 @@ const Home = () => {
             <Container>
                 <SimpleSlider />
                 <MultipleSlider />
+                <Intro />
             </Container>
         </main>
     )

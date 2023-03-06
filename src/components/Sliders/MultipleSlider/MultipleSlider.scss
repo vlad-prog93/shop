@@ -25,7 +25,7 @@
   height: 300px;
   width: 100%;
   background-color: #FFFFFF;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 
   .slick-slide {
     text-align: center;
@@ -39,12 +39,16 @@
   .slick-slide .slider-link span {
     display: block;
     margin-top: 35px;
-    color: #0a0a0a;
+    color: color.$text-color-dark;
     transition: color .3s ease;
 
     &:hover {
-      color: red;
+      color: color.$text-color-active;
     }
+  }
+
+  .slider-price {
+    color: color.$text-color-bright;
   }
 
   // стрелки
@@ -81,9 +85,6 @@
   }
 
 
-  .slider-price {
-    font-family: ''
-  }
 
 
 }

@@ -53,7 +53,7 @@ const MultipleSlider = () => {
                 <img key={img} src={img} />
                 <span>Шапки</span>
               </Link>
-              <p className="slider-price">12378</p>
+              <p className="slider-price">120 / 100 Р</p>
             </>
           ))}
         </Slider>
