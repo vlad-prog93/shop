@@ -1,0 +1,6 @@
+@font-face {
+  font-family: 'palatinolinotype_roman';
+  src: url(./palatinolinotype_roman.woff2) format('woff2'),
+       url(./palatinolinotype_roman.woff) format('woff'),
+       url(./palatinolinotype_roman.ttf) format('truetype');
+}
