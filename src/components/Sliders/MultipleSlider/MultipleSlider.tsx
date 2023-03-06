@@ -18,6 +18,7 @@ import prevArrow from '../../../images/arrow-prev.svg';
 
 
 const MultipleSlider = () => {
+  const arrayImg = [one, two, three, four, five, six]
   const settingMultSlider = {
     dots: false,
     infinite: true,
@@ -30,77 +31,37 @@ const MultipleSlider = () => {
     autoplaySpeed: 5000,
     vertical: false,
     nextArrow: (
-        <div>
-            <button><img src={nextArrow} /></button>
-        </div>
+      <button className='slick-arrow-button'>
+        <img src={nextArrow} alt='next-arrow' />
+      </button>
     ),
     prevArrow: (
-        <div>
-            <button><img src={prevArrow} /></button>
-        </div>
+      <button className='slick-arrow-button'>
+        <img src={prevArrow} alt='prev-arrow' />
+      </button>
     )
   }
 
   return (
     <>
-    <p className='MultipleSlider__info'><span></span><p>Новинки!</p><span></span></p>
-    <div className="multiple-slider__wrapper">
-      <Slider {...settingMultSlider}>
-        <div className='multiple-slider__item'>
-          <Link className='multiple-slider__link' to='/'>
-            <img className='multiple-slider__img'  src={one} alt='je;;p' />
-            <p className='multiple-slider__desc'>Шапка синяя, с подворотом</p>
-          </Link>
-          <p className="multiple-slider__price">123</p>
-        </div>
-        <div className='multiple-slider__item'>
-          <Link className='multiple-slider__link' to='/'>
-            <img className='multiple-slider__img'  src={two} alt='je;;p' />
-            <p className='multiple-slider__desc'>Шапка синяя, с подворотом</p>
-          </Link>
-          <p className="multiple-slider__price">235453</p>
-        </div>
-        <div className='multiple-slider__item'>
-          <Link className='multiple-slider__link' to='/'>
-            <img className='multiple-slider__img'  src={three} alt='je;;p' />
-            <p className='multiple-slider__desc'>Шапка синяя, с подворотом</p>
-          </Link>
-          <p className="multiple-slider__price">345345</p>
-        </div>
-        <div className='multiple-slider__item'>
-          <Link className='multiple-slider__link' to='/'>
-            <img className='multiple-slider__img'  src={four} alt='je;;p' />
-            <p className='multiple-slider__desc'>Шапка синяя, с подворотом</p>
-          </Link>
-          <p className="multiple-slider__price">456456</p>
-        </div>
-        <div className='multiple-slider__item'>
-          <Link className='multiple-slider__link' to='/'>
-            <img className='multiple-slider__img'  src={five} alt='je;;p' />
-            <p className='multiple-slider__desc'>Шапка синяя, с подворотом</p>
-          </Link>
-          <p className="multiple-slider__price">56443</p>
-        </div>
-        <div className='multiple-slider__item'>
-          <Link className='multiple-slider__link' to='/'>
-            <img className='multiple-slider__img'  src={six} alt='je;;p' />
-            <p className='multiple-slider__desc'>Шапка синяя, с подворотом</p>
-          </Link>
-          <p className="multiple-slider__price">34556</p>
-        </div>
-        <div className='multiple-slider__item'>
-          <Link className='multiple-slider__link' to='/'>
-            <img className='multiple-slider__img'  src={three} alt='je;;p' />
-            <p className='multiple-slider__desc'>Шапка синяя, с подворотом</p>
-          </Link>
-          <p className="multiple-slider__price">565673</p>
-        </div>
-      </Slider>
-    </div>
+      <p className='MultipleSlider__info'><span></span><p>Новинки!</p><span></span></p>
+      <div className="multiple-slider__wrapper">
+        <Slider {...settingMultSlider}>
+          {arrayImg.map(img => (
+            <>
+              <Link to='/caps' className='slider-link'>
+                <img key={img} src={img} />
+                <span>Шапки</span>
+              </Link>
+              <p className="slider-price">12378</p>
+            </>
+          ))}
+        </Slider>
+      </div>
     </>
-    
-    )
+
+  )
 }
 
 
-export {MultipleSlider}
+export { MultipleSlider }
